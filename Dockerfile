@@ -4,6 +4,6 @@ WORKDIR /data
 
 RUN wget https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar
 
-EXPOSE 19132
+EXPOSE 19132/udp
 
 CMD [ "java", "-Xms512M", "-Xmx2G", "-jar", "Geyser.jar" ]

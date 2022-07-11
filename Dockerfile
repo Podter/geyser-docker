@@ -9,4 +9,4 @@ EXPOSE 19132/udp
 ENV XMS=512M
 ENV XMX=2048M
 
-CMD [ "java", "-Xms${XMS}", "-Xmx${XMX}", "-jar", "Geyser.jar" ]
+CMD [ "java", "-Xms$XMS", "-Xmx$XMX", "-jar", "Geyser.jar" ]

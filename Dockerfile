@@ -1,9 +1,11 @@
-FROM eclipse-temurin:16.0.2_7-jdk-alpine
+FROM openjdk:18-slim
 
-WORKDIR /data
-
+WORKDIR /app
 RUN wget https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/target/Geyser.jar
 
 EXPOSE 19132/udp
 
-CMD [ "java", "-Xms128M", "-Xmx1536M", "-jar", "Geyser.jar" ]
+ENV XMS=512M
+ENV XMX=2048M
+
+CMD [ "java", "-Xms${XMS}", "-Xmx${XMX}", "-jar", "Geyser.jar" ]

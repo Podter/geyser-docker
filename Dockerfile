@@ -6,7 +6,4 @@ RUN wget https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSucce
 
 EXPOSE 19132/udp
 
-ENV XMS=512M
-ENV XMX=2048M
-
-CMD [ "java", "-Xms$XMS", "-Xmx$XMX", "-jar", "Geyser.jar" ]
+CMD [ "java", "-Xms512M", "-Xmx2048M", "-jar", "Geyser.jar" ]
